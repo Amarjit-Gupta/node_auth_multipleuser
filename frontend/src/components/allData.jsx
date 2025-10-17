@@ -108,7 +108,7 @@ const AllData = () => {
                         <div className="border w-40 h-10 text-center text-xl py-1">Operation</div>
                     </div>
 
-                    <div>{loading ? <div className="h-15 w-15 border m-auto mt-3 mb-3"><img src="./images/loader.gif" alt="" /></div> :
+                    <div>{loading ? <div className="h-15 w-15 m-auto mt-3 mb-3"><img src="./images/loader.gif" alt="" /></div> :
                         <>
                             {
                                 value.length ?

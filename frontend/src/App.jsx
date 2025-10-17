@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import AddData from "./components/addData";
 import AllData from "./components/allData";
 import EditData from "./components/editData";
@@ -9,8 +10,18 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 import { ToastContainer } from 'react-toastify';
 
 const App = () => {
+  
+  const [load,setLoad] = useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoad(false);
+    },500);
+  },[]);
+
   return (
     <>
+    {load?<div className="h-[100vh] w-[100%] bg-black flex justify-center items-center fixed z-10"><img src="./images/loader1.gif" alt="" className="h-30 w-40" /></div>:""}
     <ToastContainer />
       <BrowserRouter>
         <Routes>
