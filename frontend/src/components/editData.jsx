@@ -137,7 +137,7 @@ const EditData = () => {
                     <div className="border mt-5 h-10 rounded-2xl flex justify-center items-center gap-2">
                         <IoIosContact className="text-2xl text-gray-500" /><input type="text" placeholder="Enter student phone no..." className="focus:outline-none h-7 w-[80%] text-xl p-2 bg-transparent" value={inputValue.contact} name="contact" onChange={handleChange} />
                     </div>
-                    {error && !inputValue.contact && <p className="text-red-500 ml-2">Enter student phone bo...</p>}
+                    {error && !inputValue.contact && <p className="text-red-500 ml-2">Enter student phone no...</p>}
 
                     <div className="border mt-5 h-10 rounded-2xl flex justify-center items-center gap-2">
                         <SiCoursera className="text-2xl text-gray-500" /><input type="text" placeholder="Enter course name..." className="focus:outline-none h-7 w-[80%] text-xl p-2 bg-transparent" value={inputValue.course} name="course" onChange={handleChange} />
