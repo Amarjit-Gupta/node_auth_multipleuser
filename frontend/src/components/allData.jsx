@@ -67,8 +67,8 @@ const AllData = () => {
     }
 
     const handleChange = async (e) => {
-        let key = e.target.value;
         try {
+            let key = e.target.value;
             if (key) {
                 setLoading(true);
                 let result = await fetch(`${URL}/data/search/${key}`, {
