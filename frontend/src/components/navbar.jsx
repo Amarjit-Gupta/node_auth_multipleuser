@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
+import logo from "../assets/contact.png"; // image import
 
 const Navbar = () => {
 
@@ -19,7 +20,7 @@ const Navbar = () => {
 
     return (
         <div className="bg-green-200 h-25 w-[100%] pl-5 pt-3 sticky top-0 left-0">
-            <img src="./images/contact.png" alt="" className="h-20 w-20 float-left" />
+            <img src={logo} alt="" className="h-20 w-20 float-left" />
             {auth ?
                 <>
                     <button className="border h-7 w-7 float-right m-6 rounded md:hidden p-[3px]" onClick={() => setMenu(!menu)}>{menu ? <span className="text-xl"><RxCross2 /></span> : <span className="text-xl"><RxHamburgerMenu /></span>}</button>
@@ -32,8 +33,6 @@ const Navbar = () => {
                 :
                 ""
             }
-
-
         </div>
     );
 };
