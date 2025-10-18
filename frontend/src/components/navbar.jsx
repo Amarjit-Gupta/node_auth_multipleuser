@@ -18,11 +18,11 @@ const Navbar = () => {
     }
 
     return (
-        <div className="bg-green-200 h-25 w-[100%] pl-5 pt-3">
+        <div className="bg-green-200 h-25 w-[100%] pl-5 pt-3 sticky top-0 left-0">
             <img src="./images/contact.png" alt="" className="h-20 w-20 float-left" />
             {auth ?
                 <>
-                    <button className="border h-7 w-7 float-right m-7 rounded md:hidden p-[3px]" onClick={() => setMenu(!menu)}>{menu ? <span className="text-xl"><RxCross2 /></span> : <span className="text-xl"><RxHamburgerMenu /></span>}</button>
+                    <button className="border h-7 w-7 float-right m-6 rounded md:hidden p-[3px]" onClick={() => setMenu(!menu)}>{menu ? <span className="text-xl"><RxCross2 /></span> : <span className="text-xl"><RxHamburgerMenu /></span>}</button>
                     <ul className={`text-center md:text-right bg-green-300 fixed -right-[100%] top-25 text-2xl rounded ${menu ? "right-0" : ""} h-[100dvh] w-[100%] md:static md:h-0`}>
                         <li className="block p-6 md:inline-block"><NavLink to={"/"}>AllData</NavLink></li>
                         <li className="block p-6 md:inline-block"><NavLink to={"/add"}>AddData</NavLink></li>
